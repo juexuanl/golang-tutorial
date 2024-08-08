@@ -3,26 +3,18 @@ package main //if the package is main, it tells the GO compiler this code should
 import "fmt"
 
 func main() {
-	// strings
-	var name1 string = "hello"
-	var name2 = "world"
-	var name3 string
-	
-	fmt.Println(name1, name2, name3)
-	name3 = "!"
-	fmt.Println(name1, name2, name3)
+	//Println
+	name := "Zoey"
+	age := 36
+	fmt.Println("My name is", name, "my age is", age)
 
-	name4 := "I love you" //can't be used outside of a function
-	fmt.Println(name4)
+	// Printf(formatted strings) %_ = format specifier
+	fmt.Printf("my age is %v and my name is %v \n", age, name)
+	fmt.Printf("my age is %q and my name is %q \n", age, name)
+	fmt.Printf("age is of type %T \n", age)
+	fmt.Printf("you scored %0.3f points! \n", 2.3349)
 
-	// intergers
-	var age1 int = 20
-	var age2 = 30
-	age3 := 40
-	fmt.Println(age1, age2, age3)
-
-	// bits $ memory
-	var num1 int8 = 123
-	var num2 = -1283
-	fmt.Println(num1, num2)
+	// Sprintf (save formatted strings)
+	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
+	fmt.Println("the saved string is:", str)
 }
