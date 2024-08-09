@@ -3,18 +3,30 @@ package main //if the package is main, it tells the GO compiler this code should
 import "fmt"
 
 func main() {
-	//Println
-	name := "Zoey"
-	age := 36
-	fmt.Println("My name is", name, "my age is", age)
+	// var ages [3]int = [3]int{23, 34, 53}
+	// fmt.Println(ages)
 
-	// Printf(formatted strings) %_ = format specifier
-	fmt.Printf("my age is %v and my name is %v \n", age, name)
-	fmt.Printf("my age is %q and my name is %q \n", age, name)
-	fmt.Printf("age is of type %T \n", age)
-	fmt.Printf("you scored %0.3f points! \n", 2.3349)
+	// var ages = [3]int{30, 34, 21}
+	names := [4]string{"Mary", "Bill", "Lily", "Kate"}
+	// names[2] = "Eason"
+	// fmt.Println(ages, len(ages))
+	// fmt.Println(names, len(names))
 
-	// Sprintf (save formatted strings)
-	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
-	fmt.Println("the saved string is:", str)
+	//slices (use arrays under the hood)
+	// var scores = []int{100, 98, 97, 56}
+	// scores[1] = 99
+	// scores = append(scores, 78)
+	// fmt.Println(scores, len(scores))
+
+	// slice ranges
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
+
+	rangeOne = append(rangeOne, "Helen")
+	fmt.Println(rangeOne)
+
 }
